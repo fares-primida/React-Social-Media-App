@@ -123,6 +123,9 @@
   .form form .btns .submit-button a {
     font-size: 17px;
   }
+  .form form .submit-button:hover a {
+    font-size: 15px;
+  }
 }
 @media screen and (max-width: 600px) {
   .main-into-page .container .left-side .logo img {
@@ -138,6 +141,9 @@
   }
   .form form .btns .submit-button a {
     font-size: 12px;
+  }
+  .form form .submit-button:hover a {
+    font-size: 10px;
   }
 }
 @media screen and (max-width: 430px) {
