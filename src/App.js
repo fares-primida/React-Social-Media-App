@@ -1,9 +1,9 @@
 import React from 'react'
-import MainPage from './components/Login&Signup/MainPage'
+import MainPage from './components/Join/MainPage'
 
 function App() {
   return (
-    <div className="App">
+    <div className='app'>
       <MainPage />
     </div>
   );
