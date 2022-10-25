@@ -24,7 +24,7 @@ const Lognin = () => {
         />
         <div className='btns'>
         <button type='submit' className='submit-button'>
-        <a href='#'>Submit</a>
+        <a href='../Join/MainPage.js'>Submit</a>
         </button>
         </div>
     </form>

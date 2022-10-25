@@ -1,5 +1,5 @@
 import React from 'react'
-import Form from './style.css'
+import Form from './Form'
 import './style.css'
 
 const MainPage = () => {
