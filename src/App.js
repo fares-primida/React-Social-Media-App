@@ -1,4 +1,4 @@
-import React from 'react'
+import React  from 'react'
 import MainPage from './components/Join/MainPage'
 
 function App() {
