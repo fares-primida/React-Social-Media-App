@@ -12,14 +12,13 @@ const Form = () => {
                 
                 <label for='name'>Name: <input placeholder='name' id='name' type='text' /></label>
                 
-                <label for='pass'>Password: <input placeholder='password' id='pass' typy='password' /></label>
-                <label for='email'>Email: <input placeholder='Email...' id='email' typy='email' /></label>
-                <label for='number'>Number: <input placeholder='Number...' id='number' typy='number' /></label>
+                <label for='pass'>Password: <input placeholder='password' id='pass' type='password' /></label>
+                <label for='email'>Email: <input placeholder='Email...' id='email' type='email' /></label>
+                <label for='number'>Number: <input placeholder='Number...' id='number' type='text' /></label>
                 <button className='submit-btn' type='submit'>Submit</button>
                 </form>
             </div>
         </div>
     )
 }
-
 export default Form

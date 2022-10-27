@@ -130,3 +130,167 @@
         color: white;
     }
 }
+
+
+@media screen and (max-width: 850px) {
+    .form-container {
+        .form {
+            width: 300px;
+            height: 450px;
+            form {
+                .title {
+                    font-size: 22px;
+                }
+                label {
+                    input {
+                        width: 200px;
+                        height: 22px;
+                    }
+                }
+                .submit-btn {
+                    padding: 9px 28px;
+                    font-size: 13px;
+                }
+            }
+        }
+    }
+
+    .Drag-Space {
+        width: 250px;
+        height: 250px;
+        .drag-icon {
+            font-size: 35px;
+        }
+        h2 {
+            font-size: 19px;
+        }
+        button {
+            padding: 8px 17px;
+        }
+    }
+}
+
+@media screen and (max-width: 730px) {
+        .form-container {
+            .form {
+                width: 250px;
+                height: 400px;
+                form {
+                    .title {
+                        font-size: 19px;
+                    }
+                    label {
+                        input {
+                            width: 150px;
+                            height: 19px;
+                        }
+                    }
+                    .submit-btn {
+                        padding: 8px 24px;
+                        font-size: 13px;
+                    }
+                }
+            }
+        }
+    
+        .Drag-Space {
+            width: 200px;
+            height: 200px;
+            .drag-icon {
+                font-size: 30px;
+            }
+            h2 {
+                font-size: 16px;
+            }
+            button {
+                padding: 8px 15px;
+                font-size: 12px;
+            }
+        }
+}
+
+@media screen and (max-width: 670px) {
+    .form-container {
+        .form {
+            width: 200px;
+            height: 350px;
+            form {
+                .title {
+                    font-size: 16px;
+                }
+                label {
+                    font-size: 12px;
+                    input {
+                        width: 120px;
+                        height: 16px;
+                        font-size: 10px;
+                    }
+                }
+                .submit-btn {
+                    padding: 8px 20px;
+                    font-size: 10px;
+                }
+            }
+        }
+    }
+
+    .Drag-Space {
+        width: 150px;
+        height: 150px;
+        .drag-icon {
+            font-size: 25px;
+        }
+        h2 {
+            font-size: 12px;
+        }
+        button {
+            padding: 8px 12px;
+            font-size: 9px;
+        }
+    }
+}
+
+@media screen and (max-width: 440px) {
+    .form-container {
+        .steak {
+            width: 230px;
+        }
+        .form {
+            width: 150px;
+            height: 300px;
+            form {
+                .title {
+                    font-size: 13px;
+                }
+                label {
+                    font-size: 10px;
+                    input {
+                        width: 80px;
+                        height: 12px;
+                        font-size: 7px;
+                    }
+                }
+                .submit-btn {
+                    padding: 8px 15px;
+                    font-size: 7px;
+                }
+            }
+        }
+    }
+
+    .Drag-Space {
+        width: 100px;
+        height: 100px;
+        .drag-icon {
+            font-size: 20px;
+        }
+        h2 {
+            font-size: 9px;
+        }
+        button {
+            padding: 7px 10px;
+            font-size: 7px;
+            margin-top: -10px;
+        }
+    }
+}

@@ -127,4 +127,140 @@
   transform: scale(1.1);
   background-image: none;
   color: white;
+}
+
+@media screen and (max-width: 850px) {
+  .form-container .form {
+    width: 300px;
+    height: 450px;
+  }
+  .form-container .form form .title {
+    font-size: 22px;
+  }
+  .form-container .form form label input {
+    width: 200px;
+    height: 22px;
+  }
+  .form-container .form form .submit-btn {
+    padding: 9px 28px;
+    font-size: 13px;
+  }
+  .Drag-Space {
+    width: 250px;
+    height: 250px;
+  }
+  .Drag-Space .drag-icon {
+    font-size: 35px;
+  }
+  .Drag-Space h2 {
+    font-size: 19px;
+  }
+  .Drag-Space button {
+    padding: 8px 17px;
+  }
+}
+@media screen and (max-width: 730px) {
+  .form-container .form {
+    width: 250px;
+    height: 400px;
+  }
+  .form-container .form form .title {
+    font-size: 19px;
+  }
+  .form-container .form form label input {
+    width: 150px;
+    height: 19px;
+  }
+  .form-container .form form .submit-btn {
+    padding: 8px 24px;
+    font-size: 13px;
+  }
+  .Drag-Space {
+    width: 200px;
+    height: 200px;
+  }
+  .Drag-Space .drag-icon {
+    font-size: 30px;
+  }
+  .Drag-Space h2 {
+    font-size: 16px;
+  }
+  .Drag-Space button {
+    padding: 8px 15px;
+    font-size: 12px;
+  }
+}
+@media screen and (max-width: 670px) {
+  .form-container .form {
+    width: 200px;
+    height: 350px;
+  }
+  .form-container .form form .title {
+    font-size: 16px;
+  }
+  .form-container .form form label {
+    font-size: 12px;
+  }
+  .form-container .form form label input {
+    width: 120px;
+    height: 16px;
+    font-size: 10px;
+  }
+  .form-container .form form .submit-btn {
+    padding: 8px 20px;
+    font-size: 10px;
+  }
+  .Drag-Space {
+    width: 150px;
+    height: 150px;
+  }
+  .Drag-Space .drag-icon {
+    font-size: 25px;
+  }
+  .Drag-Space h2 {
+    font-size: 12px;
+  }
+  .Drag-Space button {
+    padding: 8px 12px;
+    font-size: 9px;
+  }
+}
+@media screen and (max-width: 440px) {
+  .form-container .steak {
+    width: 230px;
+  }
+  .form-container .form {
+    width: 150px;
+    height: 300px;
+  }
+  .form-container .form form .title {
+    font-size: 13px;
+  }
+  .form-container .form form label {
+    font-size: 10px;
+  }
+  .form-container .form form label input {
+    width: 80px;
+    height: 12px;
+    font-size: 7px;
+  }
+  .form-container .form form .submit-btn {
+    padding: 8px 15px;
+    font-size: 7px;
+  }
+  .Drag-Space {
+    width: 100px;
+    height: 100px;
+  }
+  .Drag-Space .drag-icon {
+    font-size: 20px;
+  }
+  .Drag-Space h2 {
+    font-size: 9px;
+  }
+  .Drag-Space button {
+    padding: 7px 10px;
+    font-size: 7px;
+    margin-top: -10px;
+  }
 }/*# sourceMappingURL=style.css.map */
