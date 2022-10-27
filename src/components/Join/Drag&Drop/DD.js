@@ -3,7 +3,7 @@ import {BiImageAdd} from 'react-icons/bi'
 import { useDropzone } from 'react-dropzone'
 import '../style.css'
 
-const DD = () => {
+const DD = ({PassData}) => {
 
     const[files, setFiles] = useState([]);
 
@@ -20,6 +20,12 @@ const DD = () => {
             }
         }
     )
+
+    const PassInfo = () => {
+        PassData(files)
+    }
+
+    PassInfo()
 
 
     return (

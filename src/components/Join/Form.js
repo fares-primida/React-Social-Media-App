@@ -1,10 +1,16 @@
-import React from 'react'
+import React, { useState } from 'react'
 import DD from './Drag&Drop/DD'
 
 const Form = () => {
+    const [data , setData] = useState([])
+
+    const PassInfo = (val) => {
+        setData(val)
+    }
+
     return (
         <div className='form-container'>
-            <DD />
+            <DD PassInfo={PassInfo} />
             <span className='steak'></span>
             <div className='form'>
                 <form>
