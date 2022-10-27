@@ -5,14 +5,19 @@ import '../style.css'
 
 const DD = () => {
 
-    const [file , setFile] = useState([])
+    const[files, setFiles] = useState([]);
 
-    const [getRootProps , getInputProps , acceptedFile] = useDropzone(
+    const{getRootProps, getInputProps, acceptedFiles} = useDropzone(
         {
-            maxFiles: 1,
-            accept: {"image/png":[".png" , ".jpg" , ".jpeg"]},
-                
-            onDrop:(acceptedFile) => {setFile(acceptedFile.map((file) => Object.assign(file, {preview: URL.createObjectURL(file)})))}
+            maxFiles:1,
+            accept:{
+                "image/png":[".png",".jpg",'.jpeg',]
+            },
+            onDrop:(acceptedFiles) =>{
+                setFiles(
+                    acceptedFiles.map((file)=>Object.assign(file,{ preview: URL.createObjectURL(file), }))
+                )
+            }
         }
     )
 
