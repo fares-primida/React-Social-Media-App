@@ -86,6 +86,17 @@
             }
             }
         }
+
+        .hidden-area {
+            position: absolute;
+            display: none;
+            .hidden {
+            display: none;
+            z-index: -999;
+            width: 0;
+            height: 0;
+            }
+        }
     }
 
 
