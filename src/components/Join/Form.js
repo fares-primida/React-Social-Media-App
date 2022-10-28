@@ -58,13 +58,13 @@ const Form = () => {
                 <form>
                 <div className='title'>Your Info</div>
                 
-                <label for='name'>Name: <input placeholder='name' value={UserName} id='name' type='text' /></label>
+                <label htmlFor='name'>Name: <input placeholder='name' value={UserName} id='name' type='text' /></label>
                 
-                <label for='pass'>Password: <input placeholder='password' value={UserPass} id='pass' type='password' /></label>
+                <label htmlFor='pass'>Password: <input placeholder='password' value={UserPass} id='pass' type='password' /></label>
 
-                <label for='email'>Email: <input onChange={(event) => setEmail(event.target.value)} placeholder='Email...' id='email' type='email' /></label>
+                <label htmlFor='email'>Email: <input onChange={(event) => setEmail(event.target.value)} placeholder='Email...' id='email' type='email' /></label>
 
-                <label for='number'>Number: <input onChange={(event) => setNubmer(event.target.value)} placeholder='Number...' id='number' type='text' /></label>
+                <label htmlFor='number'>Number: <input onChange={(event) => setNubmer(event.target.value)} placeholder='Number...' id='number' type='text' /></label>
 
                 <button onClick={CreateUser} className='submit-btn' type='submit'>Submit</button>
 
