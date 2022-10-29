@@ -28,8 +28,6 @@ const DD = ({PassData}) => {
     PassInfo()
     })
 
-    
-    
 
 
     return (

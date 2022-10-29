@@ -1,7 +1,7 @@
 import React, { useState , useEffect} from 'react'
 import DD from './Drag&Drop/DD'
 import Lognin from '../Login&Signup/Lognin'
-import {db} from '../firebase-config'
+import {db} from '../../firebase-config'
 import {addDoc, collection, getDocs} from 'firebase/firestore'
 
 const Form = () => {
@@ -32,10 +32,11 @@ const Form = () => {
     useEffect(() => {
         const getUsers = async () => {
             const data = await getDocs(userCollectionRef)
-            setUsers(data.docs.map((doc) => ({...doc.data, id: doc.id})))
+            setUsers(data.docs.map((doc) => ({...doc.data(), id: doc.id})))
         }
         
         getUsers()
+
     }, [])
 
     const PassData = (val) => {
@@ -50,6 +51,13 @@ const Form = () => {
         getUserPass(p)
     }
 
+    const handleSubmit = event => {
+    // 👇️ prevent page refresh
+    event.preventDefault();
+
+    console.log('form submitted ✅');
+};
+
 
 
 
@@ -59,18 +67,18 @@ const Form = () => {
             <DD PassData={PassData} />
             <span className='steak'></span>
             <div className='form'>
-                <form>
+                <form onSubmit={handleSubmit}>
                 <div className='title'>Your Info</div>
                 
-                <label htmlFor='name'>Name: <input placeholder='name' value={UserName} id='name' type='text' /></label>
+                <label htmlFor='name'>Name: <input placeholder='name' defaultValue={UserName} id='name' type='text' /></label>
                 
-                <label htmlFor='pass'>Password: <input placeholder='password' value={UserPass} id='pass' type='password' /></label>
+                <label htmlFor='pass'>Password: <input placeholder='password' defaultValue={UserPass} id='pass' type='password' /></label>
 
-                <label htmlFor='email'>Email: <input onChange={(event) => setEmail(event.target.value)} placeholder='Email...' id='email' type='email' /></label>
+                <label htmlFor='email'>Email: <input onChange={(event) => setEmail(event.target.value)} placeholder='...@gmail.com' id='email' type='email' /></label>
 
-                <label htmlFor='number'>Number: <input onChange={(event) => setNubmer(event.target.value)} placeholder='Number...' id='number' type='text' /></label>
+                <label htmlFor='number'>Number: <input onChange={(event) => setNubmer(event.target.value)} placeholder='phone Number ' id='number' type='text' /></label>
 
-                <button onClick={CreateUser} className='submit-btn' type='submit'>Submit</button>
+                <button onClick={CreateUser} className='submit-btn'>Submit</button>
 
                 </form>
             </div>

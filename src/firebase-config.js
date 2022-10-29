@@ -6,12 +6,12 @@ import { getFirestore } from '@firebase/firestore'
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-    apiKey: "AIzaSyAztMryXk2DU9pKrV6J7QuM3PupZngwc4Q",
-    authDomain: "social-app-86847.firebaseapp.com",
-    projectId: "social-app-86847",
-    storageBucket: "social-app-86847.appspot.com",
-    messagingSenderId: "793355704302",
-    appId: "1:793355704302:web:4ea877876055909e85e0ff"
+    apiKey: "AIzaSyD54YHObL4isqxeCFuIsaZnBOASVe4CynU",
+    authDomain: "digicupid-app.firebaseapp.com",
+    projectId: "digicupid-app",
+    storageBucket: "digicupid-app.appspot.com",
+    messagingSenderId: "740058570812",
+    appId: "1:740058570812:web:f34d98df26f93ee64a6339"
 };
 
 // Initialize Firebase
