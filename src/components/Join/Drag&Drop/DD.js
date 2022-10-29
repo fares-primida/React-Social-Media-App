@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState , useEffect} from 'react'
 import {BiImageAdd} from 'react-icons/bi'
 import { useDropzone } from 'react-dropzone'
 import '../style.css'
@@ -21,11 +21,15 @@ const DD = ({PassData}) => {
         }
     )
 
-    const PassInfo = () => {
+    useEffect(() => {
+        const PassInfo = () => {
         PassData(files)
     }
-
     PassInfo()
+    })
+
+    
+    
 
 
     return (

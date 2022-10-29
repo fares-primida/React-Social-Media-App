@@ -1,62 +1,48 @@
-import React, {useState} from 'react'
-// import {db} from '/src/firebase-config'
-// import {collection , getDoc , addDoc} from 'firebase/firestore'
+import React, { useState, useEffect } from "react";
 
-const Lognin = ({Name , Pass}) => {
 
-    const [newName , setNewName] = useState("")
-    const [password , setpassword] = useState("")
+const Lognin = ({ Name, Pass }) => {
+const [newName, setNewName] = useState("");
+const [password, setpassword] = useState("");
 
-    // const [users , setUsers] = useState([])
-    // const UserCollection = collection(db , "users")
-    
-
-    // useEffect(() => {
-    //     const getUsers = async () => {
-    //         const data = await getDoc(UserCollection)
-    //         setUsers(data.docs.map((doc) => ({...doc.data() , id: doc.id})))
-    //     }
-    //     getUsers()
-    // }, [])
-
-    // const CreateUser = async () => {
-    //     await addDoc(UserCollection , {name: newName , password: password})
-    // }
-
+useEffect(() => {
     const GetName = () => {
-        Name(newName)
-    }
-
-    GetName()
+    Name(newName);
+    };
 
     const getPass = () => {
-        Pass(password)
-    }
+    Pass(password);
+    };
+    GetName();
+    getPass();
+});
 
-    getPass()
-
-    return (
-    <div className='form'>
+return (
+    <div className="form">
     <form>
-        <h1 className='title'>Start Now</h1>
+        <h1 className="title">Start Now</h1>
         <input
-        placeholder='Name' 
-        type='text'
-        onChange={(event) => {setNewName(event.target.value)}}
+        placeholder="Name"
+        type="text"
+        onChange={(event) => {
+            setNewName(event.target.value);
+        }}
         />
         <input
-        placeholder='Password' 
-        type='password'
-        onChange={(event) => {setpassword(event.target.value)}}
+        placeholder="Password"
+        type="password"
+        onChange={(event) => {
+            setpassword(event.target.value);
+        }}
         />
-        <div className='btns'>
-        <button type='submit' className='submit-button'>
-            <a href='../Join/MainPage.js'>Submit</a>
+        <div className="btns">
+        <button type="submit" className="submit-button">
+            <a href="../Join/MainPage.js">Submit</a>
         </button>
         </div>
     </form>
     </div>
-    )
-}
+);
+};
 
-export default Lognin
+export default Lognin;
