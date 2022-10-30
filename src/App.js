@@ -1,10 +1,10 @@
 import React  from 'react'
-import MainPage from './components/Join/MainPage'
+import UserPage from './components/user-page/UserPage'
 
 function App() {
   return (
     <div className='app'>
-      <MainPage />
+      <UserPage />
     </div>
   );
 }
