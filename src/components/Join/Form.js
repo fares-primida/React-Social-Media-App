@@ -9,19 +9,16 @@ const Form = () => {
     const [number , setNubmer] = useState(0)
 
 
-    const [imageData , setImageData] = useState([])
     const [UserName , getUserName] = useState("")
     const [UserPass , getUserPass] = useState("")
 
 
-    
 
     const[users , setUsers] = useState([])
     const userCollectionRef = collection(db , "users")
 
     const CreateUser = async () => {
         await addDoc(userCollectionRef , {
-            image: imageData,
             name: UserName,
             password: UserPass,
             email: email,
@@ -39,9 +36,9 @@ const Form = () => {
 
     }, [])
 
-    const PassData = (val) => {
-        setImageData(val)
-    }
+    
+
+
 
     const Name = (n) => {
         getUserName(n)
@@ -60,11 +57,9 @@ const Form = () => {
 
 
 
-
-
     return (
         <div className='form-container'>
-            <DD PassData={PassData} />
+            <DD />
             <span className='steak'></span>
             <div className='form'>
                 <form onSubmit={handleSubmit}>
