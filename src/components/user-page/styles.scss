@@ -13,9 +13,6 @@ $clr: #222327;
 .navbar {
     width: 100%;
     height: 110px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
     position: relative;
     background-color: $clr;
     .navbar-container {
@@ -23,22 +20,85 @@ $clr: #222327;
         width: 100%;
         height: 100%;
         padding: 20px 10px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        .logo {
+            width: 250px;
+            height: 100%;
+            position: absolute;
+            img {
+                position: absolute;
+                top: 50%;
+                left: 30%;
+                transform: translate(-50% , -50%);
+                height: 80px;
+            }
+        }
+        .search {
+            position: absolute;
+            width: 650px;
+            height: 100%;
+            left: 22%;
+            .search-area {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50% , -50%);
+                width: 550px;
+                height: 70px;
+                padding: 10px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                .search-logo {
+                    width: 80px;
+                    height: 50px;
+                    background-color: #555;
+                    border-radius: 15px 0 0 15px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    .search-mark {
+                        font-size: 20px;
+                    }
+                }
+                .search-input {
+                    width: 400px;
+                    height: 50px;
+                    border-radius: 0 15px 15px 0;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    input {
+                        width: 400px;
+                        height: 50px;
+                        border: none;
+                        border-radius: 0 15px 15px 0;
+                        padding: 5px 10px;
+                        font-weight: bold;
+                    }
+                }
+            }
+        }
         .navigation-routing {
             position: absolute;
-            width: 400px;
-            height: 70px;
-            background-color: #fff;
+            width: 350px;
+            height: 60px;
+            background-image: linear-gradient(to top ,#cc2b5e , #753a88);
             display: flex;
             align-items: center;
             justify-content: center;
             border-radius: 10px;
+            right: 3%;
+            bottom: 10%;
             ul {
                 display: flex;
-                width: 350px;
+                width: 300px;
                 li {
                     position: relative;
-                    width: 70px;
-                    height: 70px;
+                    width: 60px;
+                    height: 60px;
                     list-style: none;
                     z-index: 1;
                     a {
@@ -54,7 +114,7 @@ $clr: #222327;
                             position: relative;
                             display: block;
                             line-height: 75px;
-                            font-size: 1.4rem;
+                            font-size: 1.1rem;
                             text-align: center;
                             transition: .5s;
                             color: $clr;
@@ -62,8 +122,8 @@ $clr: #222327;
                         .text {
                             position: absolute;
                             color: $clr;
-                            font-weight: 400;
-                            font-size: .75em;
+                            font-weight: bold;
+                            font-size: .55em;
                             letter-spacing: 0.05em;
                             transition: 0.5s;
                             opacity: 0;
@@ -72,7 +132,7 @@ $clr: #222327;
                     }
                 }
                 li.active a .icon {
-                    transform: translateY(-32px);
+                    transform: translateY(-33px);
                 }
                 li.active a .text {
                     opacity: 1;
@@ -81,19 +141,20 @@ $clr: #222327;
                 .indicator {
                     position: absolute;
                     top: -50%;
-                    width: 70px;
-                    height: 70px;
+                    width: 60px;
+                    height: 60px;
                     background-color: #29fd53;
                     border-radius: 50%;
                     border: 6px solid $clr;
+                    transition: .4s;
                 }
                 .indicator::before {
                     content: '';
                     position: absolute;
                     top: 50%;
-                    left: -22px;
-                    width: 20px;
-                    height: 20px;
+                    left: -17.6px;
+                    width: 15px;
+                    height: 15px;
                     background-color: transparent;
                     border-top-right-radius: 20px;
                     box-shadow: 0 -10px 0 0 $clr;
@@ -102,12 +163,27 @@ $clr: #222327;
                     content: '';
                     position: absolute;
                     top: 50%;
-                    right: -22px;
-                    width: 20px;
-                    height: 20px;
+                    right: -17.6px;
+                    width: 16px;
+                    height: 16px;
                     background-color: transparent;
                     border-top-left-radius: 20px;
                     box-shadow: 0 -10px 0 0 $clr;
+                }
+                li:nth-child(1).active ~ .indicator {
+                    transform: translateX(calc(60px * 0));
+                }
+                li:nth-child(2).active ~ .indicator {
+                    transform: translateX(calc(60px * 1));
+                }
+                li:nth-child(3).active ~ .indicator {
+                    transform: translateX(calc(60px * 2));
+                }
+                li:nth-child(4).active ~ .indicator {
+                    transform: translateX(calc(60px * 3));
+                }
+                li:nth-child(5).active ~ .indicator {
+                    transform: translateX(calc(60px * 4));
                 }
             }
         }

@@ -1,29 +1,55 @@
-import React from 'react'
+import React, {useEffect , useRef} from 'react'
 import './main'
 import {AiFillHome} from 'react-icons/ai'
-import {FaUserAlt , FaUserFriends} from 'react-icons/fa'
+import {FaUserAlt , FaUserFriends , FaSearch} from 'react-icons/fa'
 import {BsFillBookmarkFill} from 'react-icons/bs'
 import {FcSettings} from 'react-icons/fc'
 import '../styles.css'
+import Image from '../../../assets/Logo/white-logo.png'
 
 
-const List = document.querySelectorAll(".list");
-function ActiveLink() {
-    List.forEach(
-        (item) => item.classList.remove("active"),
-        this.classList.add("active")
-    );
-}
 
-List.forEach((li) => li.addEventListener("click", ActiveLink));
 
 const Navbar = () => {
 
-    return (
+    const Ref = useRef(null)
+
+    
+
+    useEffect(() => {
+        const List = document.querySelectorAll(".list");
+
+        function ActiveLink(e) {
+            List.forEach(
+                (item) => item.classList.remove("active"),
+            );
+            e.classList.add('active')
+        }
+        List.forEach((li) => li.addEventListener("click", function(e) {
+            const selection = e.currentTarget
+            ActiveLink(selection)
+        }));
+    })
+    
+
+    return ( 
         <header className='navbar'>
             <div className='navbar-container'>
+                <div className='logo'>
+                    <img src={Image} alt='' />
+                </div>
+                <div className='search'>
+                    <div className='search-area'>
+                        <div className='search-logo'>
+                            <FaSearch className='search-mark' />
+                        </div>
+                        <div className="search-input">
+                            <input type='text' placeholder='Search...' />
+                        </div>
+                    </div>
+                </div>
                 <div className='navigation-routing'>
-                    <ul>
+                    <ul className='UL' ref={Ref} >
 
                         <li className='list active'>
                             <a href='#'>
