@@ -1,84 +1,73 @@
-import React, { useState , useEffect} from 'react'
-import DD from './Drag&Drop/DD'
-import Lognin from '../Login&Signup/Lognin'
-import {db} from '../../firebase-config'
-import {addDoc, collection, getDocs} from 'firebase/firestore'
+import React from 'react'
+// import DD from './Drag&Drop/DD'
+// import {db} from '../../firebase-config'
+// import {addDoc, collection, getDocs} from 'firebase/firestore'
 
 const Form = () => {
-    const [email , setEmail] = useState("")
-    const [number , setNubmer] = useState(0)
+//     const [email , setEmail] = useState("")
+//     const [number , setNubmer] = useState(0)
 
 
-    const [UserName , getUserName] = useState("")
-    const [UserPass , getUserPass] = useState("")
+//     const [UserName , getUserName] = useState("")
+//     const [UserPass , getUserPass] = useState("")
 
 
 
-    const[users , setUsers] = useState([])
-    const userCollectionRef = collection(db , "users")
+//     const[users , setUsers] = useState([])
+//     const userCollectionRef = collection(db , "users")
 
-    const CreateUser = async () => {
-        await addDoc(userCollectionRef , {
-            name: UserName,
-            password: UserPass,
-            email: email,
-            number: Number(number)
-        })
-    }
+//     const CreateUser = async () => {
+//         await addDoc(userCollectionRef , {
+//             name: UserName,
+//             password: UserPass,
+//             email: email,
+//             number: Number(number)
+//         })
+//     }
 
-    useEffect(() => {
-        const getUsers = async () => {
-            const data = await getDocs(userCollectionRef)
-            setUsers(data.docs.map((doc) => ({...doc.data(), id: doc.id})))
-        }
+//     useEffect(() => {
+//         const getUsers = async () => {
+//             const data = await getDocs(userCollectionRef)
+//             setUsers(data.docs.map((doc) => ({...doc.data(), id: doc.id})))
+//         }
         
-        getUsers()
+//         getUsers()
 
-    }, [])
-
-    
+//     }, [])
 
 
+//     const handleSubmit = event => {
+//     // 👇️ prevent page refresh
+//     event.preventDefault();
 
-    const Name = (n) => {
-        getUserName(n)
-    }
-
-    const Pass = (p) => {
-        getUserPass(p)
-    }
-
-    const handleSubmit = event => {
-    // 👇️ prevent page refresh
-    event.preventDefault();
-
-    console.log('form submitted ✅');
-};
+//     console.log('form submitted ✅');
+// };
 
 
 
     return (
-        <div className='form-container'>
-            <DD />
-            <span className='steak'></span>
-            <div className='form'>
-                <form onSubmit={handleSubmit}>
-                <div className='title'>Your Info</div>
-                
-                <label htmlFor='name'>Name: <input placeholder='name' defaultValue={UserName} id='name' type='text' /></label>
-                
-                <label htmlFor='pass'>Password: <input placeholder='password' defaultValue={UserPass} id='pass' type='password' /></label>
+        <div className='page-container'>
+            <div className='form-1'>
+                <div className='animated-el'></div>
+                <div className='form-container'>
+                    <form>
+                        <h2>Step 1</h2>
+                        <input placeholder='Name'required type='text' />
+                        <input placeholder='Password'required type='password' />
+                    </form>
+                </div>
+            </div> 
 
-                <label htmlFor='email'>Email: <input onChange={(event) => setEmail(event.target.value)} placeholder='...@gmail.com' id='email' type='email' /></label>
-
-                <label htmlFor='number'>Number: <input onChange={(event) => setNubmer(event.target.value)} placeholder='phone Number ' id='number' type='text' /></label>
-
-                <button onClick={CreateUser} className='submit-btn'>Submit</button>
-
-                </form>
+            <div className='form-1'>
+                <div className='animated-el'></div>
+                <div className='form-container'>
+                    <form>
+                        <h2>Step 3</h2>
+                        <input placeholder='...@gmail.com'required type='email' />
+                        <input placeholder='Phone Number'required type='text' />
+                    </form>
+                </div>
             </div>
-
-            <div className='hidden-area'><Lognin Pass={Pass} Name={Name} className='hidden' /></div>
         </div>
     )
 }

@@ -32,6 +32,7 @@ const DD = ({PassData}) => {
 
 
     return (
+    <div className='Drag-Space_container'>
         <div {...getRootProps(
             {className: 'Drag-Space'}
         )}>
@@ -41,6 +42,7 @@ const DD = ({PassData}) => {
             </a>
             <h2>Drag Your Photo</h2>
             <button>Browse Images</button>
+        </div>
         </div>
     )
 }

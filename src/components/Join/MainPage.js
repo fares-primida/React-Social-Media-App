@@ -4,7 +4,7 @@ import'./style.css'
 
 const MainPage = () => {
     return (
-        <div>
+        <div className='main-page'>
             <Form />
         </div>
     )
