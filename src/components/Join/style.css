@@ -6,22 +6,33 @@
   font-family: "Noto Sans", sans-serif;
 }
 
-.main-page {
+.page-container {
   position: relative;
   width: 100%;
-  height: 100vh;
-}
-
-.page-container {
-  position: absolute;
-  width: 100%;
-  height: 100%;
+  min-height: 100vh;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
   background-color: #111;
   padding: 20px;
+}
+.page-container .start-button {
+  position: absolute;
+  left: 50%;
+  bottom: 10%;
+  transform: translate(-50%, -50%);
+  border: none;
+  padding: 10px 30px;
+  font-size: 20px;
+  font-weight: bold;
+  border-radius: 15px;
+  background-color: rgb(4, 0, 255);
+  color: #fff;
+  cursor: pointer;
+}
+.page-container .DD {
+  position: absolute;
 }
 .page-container .form-1 {
   position: relative;
@@ -93,180 +104,52 @@
     transform: translate(-50%, -50%) rotate(360deg);
   }
 }
-.Drag-Space {
+.Drag-Space_container {
+  position: relative;
+  width: 250px;
+  height: 250px;
+  background-color: #000;
+  border-radius: 50%;
+  overflow: hidden;
+  margin: 10px;
+}
+.Drag-Space_container .Animation-dd {
   position: absolute;
-  left: 25%;
+  left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
-  width: 300px;
-  height: 300px;
-  background-color: rgb(5, 236, 186);
+  width: 100px;
+  height: 350px;
+  background-color: rgb(10, 214, 241);
+  -webkit-animation: rotatte 3s linear infinite;
+          animation: rotatte 3s linear infinite;
+}
+.Drag-Space_container .Drag-Space {
+  position: absolute;
+  border-radius: 50%;
+  inset: 5px;
+  background-color: #000;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
-  flex-direction: column;
-  border-radius: 20px;
-  z-index: 1;
+  padding: 5px 2px;
 }
-.Drag-Space .drag-icon {
+.Drag-Space_container .Drag-Space .drag-icon {
   font-size: 40px;
-  text-decoration: none;
   color: #fff;
   margin: 10px;
 }
-.Drag-Space h2 {
+.Drag-Space_container .Drag-Space h2 {
   color: #fff;
-  margin-bottom: 20px;
-  font-weight: bold;
+  margin: 10px;
 }
-.Drag-Space button {
-  padding: 10px 20px;
-  color: #000;
-  background-image: linear-gradient(rgb(5, 236, 186), #fff);
-  border-radius: 10px;
+.Drag-Space_container .Drag-Space button {
+  margin: 10px;
+  padding: 7px 20px;
+  font-weight: bold;
+  border-radius: 15px;
   border: none;
   cursor: pointer;
-  transition: 0.4s ease-in;
-}
-.Drag-Space button:hover {
-  background-color: rgb(6, 216, 170);
-  transform: scale(1.1);
-  background-image: none;
-  color: white;
-}
-
-@media screen and (max-width: 850px) {
-  .form-container .form {
-    width: 300px;
-    height: 450px;
-  }
-  .form-container .form form .title {
-    font-size: 22px;
-  }
-  .form-container .form form label input {
-    width: 200px;
-    height: 22px;
-  }
-  .form-container .form form .submit-btn {
-    padding: 9px 28px;
-    font-size: 13px;
-  }
-  .Drag-Space {
-    width: 250px;
-    height: 250px;
-  }
-  .Drag-Space .drag-icon {
-    font-size: 35px;
-  }
-  .Drag-Space h2 {
-    font-size: 19px;
-  }
-  .Drag-Space button {
-    padding: 8px 17px;
-  }
-}
-@media screen and (max-width: 730px) {
-  .form-container .form {
-    width: 250px;
-    height: 400px;
-  }
-  .form-container .form form .title {
-    font-size: 19px;
-  }
-  .form-container .form form label input {
-    width: 150px;
-    height: 19px;
-  }
-  .form-container .form form .submit-btn {
-    padding: 8px 24px;
-    font-size: 13px;
-  }
-  .Drag-Space {
-    width: 200px;
-    height: 200px;
-  }
-  .Drag-Space .drag-icon {
-    font-size: 30px;
-  }
-  .Drag-Space h2 {
-    font-size: 16px;
-  }
-  .Drag-Space button {
-    padding: 8px 15px;
-    font-size: 12px;
-  }
-}
-@media screen and (max-width: 670px) {
-  .form-container .form {
-    width: 200px;
-    height: 350px;
-  }
-  .form-container .form form .title {
-    font-size: 16px;
-  }
-  .form-container .form form label {
-    font-size: 12px;
-  }
-  .form-container .form form label input {
-    width: 120px;
-    height: 16px;
-    font-size: 10px;
-  }
-  .form-container .form form .submit-btn {
-    padding: 8px 20px;
-    font-size: 10px;
-  }
-  .Drag-Space {
-    width: 150px;
-    height: 150px;
-  }
-  .Drag-Space .drag-icon {
-    font-size: 25px;
-  }
-  .Drag-Space h2 {
-    font-size: 12px;
-  }
-  .Drag-Space button {
-    padding: 8px 12px;
-    font-size: 9px;
-  }
-}
-@media screen and (max-width: 440px) {
-  .form-container .steak {
-    width: 230px;
-  }
-  .form-container .form {
-    width: 150px;
-    height: 300px;
-  }
-  .form-container .form form .title {
-    font-size: 13px;
-  }
-  .form-container .form form label {
-    font-size: 10px;
-  }
-  .form-container .form form label input {
-    width: 80px;
-    height: 12px;
-    font-size: 7px;
-  }
-  .form-container .form form .submit-btn {
-    padding: 8px 15px;
-    font-size: 7px;
-  }
-  .Drag-Space {
-    width: 100px;
-    height: 100px;
-  }
-  .Drag-Space .drag-icon {
-    font-size: 20px;
-  }
-  .Drag-Space h2 {
-    font-size: 9px;
-  }
-  .Drag-Space button {
-    padding: 7px 10px;
-    font-size: 7px;
-    margin-top: -10px;
-  }
+  background-image: linear-gradient(to bottom, #000, #fff);
 }/*# sourceMappingURL=style.css.map */

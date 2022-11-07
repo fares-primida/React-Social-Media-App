@@ -1,5 +1,5 @@
 import React from 'react'
-// import DD from './Drag&Drop/DD'
+import DD from './Drag&Drop/DD'
 // import {db} from '../../firebase-config'
 // import {addDoc, collection, getDocs} from 'firebase/firestore'
 
@@ -47,6 +47,7 @@ const Form = () => {
 
     return (
         <div className='page-container'>
+            <button className='start-button'>Start Now</button>
             <div className='form-1'>
                 <div className='animated-el'></div>
                 <div className='form-container'>
@@ -57,7 +58,7 @@ const Form = () => {
                     </form>
                 </div>
             </div> 
-
+                <DD className='DD' />
             <div className='form-1'>
                 <div className='animated-el'></div>
                 <div className='form-container'>
