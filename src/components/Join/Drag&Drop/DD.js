@@ -21,12 +21,12 @@ const DD = ({PassData}) => {
         }
     )
 
-    // useEffect(() => {
+    useEffect(() => {
         const PassInfo = () => {
         PassData(files)
     }
     PassInfo()
-    // })
+    })
 
 
     return (

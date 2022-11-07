@@ -20,21 +20,35 @@
     justify-content: space-between;
     background-color: #111;
     padding: 20px;
-    .start-button {
-        position: absolute;
-        left: 50%;
-        bottom: 10%;
-        transform: translate(-50% , -50%);
-        border: none;
-        padding: 10px 30px;
-        font-size: 20px;
-        font-weight: bold;
-        border-radius: 15px;
-        background-color: rgb(53, 53, 54);
-        color: #fff;
-        opacity: .6;
-        cursor: pointer;
-    }
+    // .start-button {
+    //     position: absolute;
+    //     left: 50%;
+    //     bottom: 10%;
+    //     transform: translate(-50% , -50%);
+    //     border: none;
+    //     padding: 10px 30px;
+    //     font-size: 20px;
+    //     font-weight: bold;
+    //     border-radius: 15px;
+    //     background-color: rgb(53, 53, 54);
+    //     color: #fff;
+    //     opacity: .6;
+    //     cursor: pointer;
+        .Button-Logo {
+            position: absolute;
+            left: 50%;
+            bottom: 0%;
+            width: 70px;
+            height: fit-content;
+            padding: 7px 0 0 0;
+            border-radius: 15px;
+            background-color: rgb(0, 0, 0);
+            text-align: center;
+            transform: translate(-50% , -50%);
+            color: #fff;
+            font-size: 50px;
+        }
+    // }
     .DD {
         position: absolute;
         

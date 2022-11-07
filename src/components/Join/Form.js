@@ -1,4 +1,5 @@
 import React, {useState , useEffect} from 'react'
+import {AiOutlineLogin} from 'react-icons/ai'
 import DD from './Drag&Drop/DD'
 import {db} from '../../firebase-config'
 import {addDoc, collection, getDocs} from 'firebase/firestore'
@@ -26,11 +27,7 @@ const Form = () => {
             number: Number(number)
         })
     }
-    console.log(image)
-    console.log(UserName)
-    console.log(UserPass)
-    console.log(email)
-    console.log(number)
+    
     useEffect(() => {
         const getUsers = async () => {
             const data = await getDocs(userCollectionRef)
@@ -52,7 +49,10 @@ const Form = () => {
 
     return (
         <div className='page-container'>
-            <button onClick={CreateUser} className='start-button'>Start Now</button>
+                <a href='#' onClick={CreateUser} className='Button-Logo'>
+                    <AiOutlineLogin />
+                </a>
+                
             <div className='form-1'>
                 <div className='animated-el'></div>
                 <div className='form-container'>
