@@ -27,8 +27,9 @@
   font-size: 20px;
   font-weight: bold;
   border-radius: 15px;
-  background-color: rgb(4, 0, 255);
+  background-color: rgb(53, 53, 54);
   color: #fff;
+  opacity: 0.6;
   cursor: pointer;
 }
 .page-container .DD {
