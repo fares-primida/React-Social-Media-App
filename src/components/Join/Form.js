@@ -52,7 +52,6 @@ const Form = () => {
                 <a href='#' onClick={CreateUser} className='Button-Logo'>
                     <AiOutlineLogin />
                 </a>
-                
             <div className='form-1'>
                 <div className='animated-el'></div>
                 <div className='form-container'>
