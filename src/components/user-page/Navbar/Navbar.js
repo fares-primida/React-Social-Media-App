@@ -1,5 +1,4 @@
 import React, {useEffect , useRef} from 'react'
-import './main'
 import {AiFillHome} from 'react-icons/ai'
 import {FaUserAlt , FaUserFriends , FaSearch} from 'react-icons/fa'
 import {BsFillBookmarkFill} from 'react-icons/bs'
