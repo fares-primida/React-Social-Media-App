@@ -1,6 +1,7 @@
 import React from 'react'
 import Aside from './Aside/Aside'
 import Navbar from '../../user-page/Navbar/Navbar'
+import ContentSection from '../ContentSection/ContentSection'
 
 const Section = () => {
     return (
@@ -8,6 +9,7 @@ const Section = () => {
             <Navbar />
             <section className='main-section'>
             <Aside />
+            <ContentSection />
             </section>
         </div>
     )

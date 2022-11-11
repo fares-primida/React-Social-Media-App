@@ -4,4 +4,20 @@
   margin: 0;
   box-sizing: border-box;
   font-family: "Noto Sans", sans-serif;
+}
+
+.content-section {
+  position: absolute;
+  width: 90%;
+  height: 100%;
+  background-color: #888;
+  right: 0;
+}
+
+.firends-section {
+  position: absolute;
+  right: 0;
+  width: 25%;
+  height: 100%;
+  background-color: #666;
 }/*# sourceMappingURL=Styles.css.map */
