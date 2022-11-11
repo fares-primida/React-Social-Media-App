@@ -13,11 +13,101 @@
   background-color: #888;
   right: 0;
 }
+.content-section .Hidden {
+  display: none;
+  width: 0;
+  height: 0;
+}
+.content-section .Hidden .hidden-com {
+  display: none;
+  width: 0;
+  height: 0;
+}
 
 .firends-section {
   position: absolute;
   right: 0;
   width: 25%;
   height: 100%;
-  background-color: #666;
+  background-color: rgb(42, 42, 48);
+  border-left: 2px solid #000;
+}
+.firends-section .Search-area {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 15%;
+  background-color: rgb(42, 42, 48);
+  border-bottom: 1px solid #666;
+}
+.firends-section .Search-area .contents {
+  position: absolute;
+  inset: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.firends-section .Search-area .contents .search-icon {
+  width: 100px;
+  height: 50px;
+  background-color: #222;
+  border-radius: 15px 0 0 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.firends-section .Search-area .contents .search-icon .icon {
+  font-size: 25px;
+}
+.firends-section .Search-area .contents .search-input {
+  width: 250px;
+  height: 50px;
+  background-color: #fff;
+  border-radius: 0 15px 15px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.firends-section .Search-area .contents .search-input input {
+  width: 100%;
+  height: 100%;
+  border: none;
+  border-radius: 0 15px 15px 0;
+}
+.firends-section .friends-area {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 85%;
+  background-color: transparent;
+  padding: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.firends-section .friends-area .user {
+  width: 350px;
+  height: 75px;
+  background-color: rgb(20, 1, 26);
+  margin: 5px;
+  display: flex;
+  align-items: center;
+  padding: 5px;
+  border-radius: 10px;
+}
+.firends-section .friends-area .user .image {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background-color: #fff;
+  margin-right: 10px;
+}
+.firends-section .friends-area .user .name {
+  align-items: center;
+}
+.firends-section .friends-area .user .name span {
+  color: #fff;
+  font-size: 1.2rem;
 }/*# sourceMappingURL=Styles.css.map */

@@ -5,7 +5,7 @@
     import { db } from "../../firebase-config";
     import { addDoc, collection, getDocs } from "firebase/firestore";
 
-    const Form = () => {
+    const Form = ({Name , Image , UsersInfo}) => {
     const [UserName, getUserName] = useState("");
     const [UserPass, getUserPass] = useState("");
 
@@ -17,8 +17,6 @@
     const [users, setUsers] = useState([]);
     const userCollectionRef = collection(db, "users");
 
-    const ImageValue = Object.values(image)
-    console.log(ImageValue)
 
     const CreateUser = async () => {
     await addDoc(userCollectionRef, {
@@ -36,6 +34,19 @@
     };
 
     getUsers();
+
+    const Name = () => {
+        Name(UserName)
+    }
+    const Image = () => {
+        Image(image)
+    }
+    const UsersInfo = () => {
+        UsersInfo(users)
+    }
+    Name()
+    Image()
+    UsersInfo()
     }, []);
 
     const PassData = (img) => {

@@ -214,6 +214,7 @@ $clr: #222327;
     box-shadow: 15px 15px 15px rgba(0, 0, 0, 0.05);
     transition: .5s;
     height: 600px;
+    z-index: 999;
     ul {
         position: absolute;
         left: 0;
