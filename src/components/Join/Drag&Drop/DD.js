@@ -1,49 +1,45 @@
-import React, { useState , useEffect} from 'react'
-import {BiImageAdd} from 'react-icons/bi'
-import { useDropzone } from 'react-dropzone'
-import '../style.css'
+    import React, { useState, useEffect } from "react";
+    import { BiImageAdd } from "react-icons/bi";
+    import { useDropzone } from "react-dropzone";
+    import "../style.css";
 
-const DD = ({PassData}) => {
+    const DD = ({ PassData }) => {
+    const [files, setFiles] = useState([]);
 
-    const[files, setFiles] = useState([]);
-
-    const{getRootProps, getInputProps, acceptedFiles} = useDropzone(
-        {
-            maxFiles:1,
-            accept:{
-                "image/png":[".png",".jpg",'.jpeg',]
-            },
-            onDrop:(acceptedFiles) =>{
-                setFiles(
-                    acceptedFiles.map((file)=>Object.assign(file,{ preview: URL.createObjectURL(file), }))
-                )
-            }
-        }
-    )
+    const { getRootProps, getInputProps, acceptedFiles } = useDropzone({
+    maxFiles: 1,
+    accept: {
+        "image/png": [".png", ".jpg", ".jpeg"],
+    },
+    onDrop: (acceptedFiles) => {
+        setFiles(
+        acceptedFiles.map((file) =>
+            Object.assign(file, { preview: URL.createObjectURL(file) })
+        )
+        );
+    },
+    });
 
     useEffect(() => {
-        const PassInfo = () => {
-        PassData(files)
-    }
-    PassInfo()
-    })
-
+    const PassInfo = () => {
+        PassData(files);
+    };
+    PassInfo();
+    });
 
     return (
-    <div className='Drag-Space_container'>
-        <div className='Animation-dd'></div>
-        <div {...getRootProps(
-            {className: 'Drag-Space'}
-        )}>
-            <input {...getInputProps()} />
-            <a href='#' className='drag-icon'>
+    <div className="Drag-Space_container">
+        <div className="Animation-dd"></div>
+        <div {...getRootProps({ className: "Drag-Space" })}>
+        <input {...getInputProps()} />
+        <a href="#" className="drag-icon">
             <BiImageAdd />
-            </a>
-            <h2>Drag Your Photo</h2>
-            <button>Browse Images</button>
+        </a>
+        <h2>Drag Your Photo</h2>
+        <button>Browse Images</button>
         </div>
-        </div>
-    )
-}
+    </div>
+    );
+    };
 
-export default DD
+    export default DD;
